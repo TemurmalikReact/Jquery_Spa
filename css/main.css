@@ -12846,22 +12846,22 @@ img {
     margin-bottom: 50px;
   }
   .resume .content-year {
-    font-size: 12px;
+    font-size: 10px;
     margin-bottom: 0;
-  }
+  } 
   .resume .content-header {
-    font-size: 13px;
+    font-size: 11px;
     margin-bottom: 0;
-  }
+  } 
   .resume .content-text {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 10px;
+    line-height: 15px;
     margin-bottom: 5px;
   }
   .resume__content {
     width: 100%;
-    padding: 0 0 35px 30px !important;
-  }
+    padding: 0 0 25px 25px !important;
+  } 
   .resume__content::before {
     -webkit-transform: translateX(-60%);
        -moz-transform: translateX(-60%);
@@ -12879,21 +12879,21 @@ img {
   }
   .resume__header {
     width: 100%;
-    height: 55px;
-    font-size: 14px;
+    height: 45px;
+    font-size: 12px;
     margin-bottom: 33px;
   }
   .resume__ico-div {
-    height: 40px;
-    width: 40px;
-    margin: 0 18px;
+    height: 35px;
+    width: 35px;
+    margin: 0 14px;
   }
   .resume__ico-div svg {
-    height: 21px;
-    width: 21px;
+    height: 17px;
+    width: 17px;
   }
   .contact__column {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
   .contact__column:nth-child(2) {
     padding-left: 15px;
@@ -13880,7 +13880,7 @@ img {
   font-family: "Montserrat Bold";
   color: rgba(255, 255, 255, 0.7);
   font-size: 16rem;
-  padding-top: 250px;
+  padding-top: 125px;
 }
 
 .typing {
@@ -14208,7 +14208,7 @@ img {
   }
   .hello {
     font-size: 7rem;
-    padding-top: 150px;
+    padding-top: 50px;
   }
   .typing {
     font-size: 1.5rem;
@@ -14378,12 +14378,12 @@ img {
        -moz-box-flex: 0;
         -ms-flex: 0 0 25%;
             flex: 0 0 25%;
-  }
+  } 
   .sidebar__nav-link {
     height: 100%;
   }
   .sidebar__nav-link span {
-    font-size: 8px;
+    font-size: 7px;
   }
   .sidebar__nav-ico-link .fa {
     font-size: 16px;
@@ -14405,7 +14405,7 @@ img {
     margin-bottom: 4px;
   }
   .sidebar__nav-link span {
-    font-size: 7px;
+    font-size: 6px;
   }
   .sidebar__wrapper {
     width: 100%;

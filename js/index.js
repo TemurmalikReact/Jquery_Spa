@@ -146,13 +146,6 @@ $(document).ready(function () {
             .siblings()
             .find(".sidebar__nav-link")
         let delayAddLink = $(this)
-        // history.pushState(delayAddLink) 
-        if (`/${$(delayAddLink).attr("href").slice(1)}` === "/home") {
-            history.pushState(null, null, "/"); 
-        }  
-        else {
-            history.pushState(null, null, `/${$(delayAddLink).attr("href").slice(1)}`); 
-        }
         let delayLinkFoo = setTimeout(() => {
             $(delayRemoveLink)
                 .parent()
@@ -434,7 +427,6 @@ $(document).ready(function () {
 
     $(".page").on("click", ".blog__card-link", function (e) {
         e.preventDefault() 
-        history.pushState(null, null, "blog/simples"); 
         $(".window__wrapper").addClass("gone")
         let sectionAnimate = setTimeout(() => {
             $(".window__wrapper").removeClass("gone")
@@ -453,7 +445,6 @@ $(document).ready(function () {
 
     $(".page").on("click", ".blog-simple__card-back", function (e) {
         e.preventDefault()
-        history.pushState(null, null, "/blog"); 
         $(".window__wrapper").addClass("gone")
         let sectionAnimate = setTimeout(() => {
             $(".window__wrapper").removeClass("gone")
@@ -716,7 +707,6 @@ $(document).ready(function () {
 
     $(".portfolio__filter-wrapper").on("click", ".portfolio__img", function (e) {
         e.preventDefault()
-        history.pushState(null, null, "portfolio/simples"); 
         $(".window__wrapper").addClass("gone")
         let sectionAnimate = setTimeout(() => {
             $(".window__wrapper").removeClass("gone")
@@ -734,7 +724,6 @@ $(document).ready(function () {
 
     $(".page").on("click", ".Portfolio-Simple__back", function (e) {
         e.preventDefault()
-        history.pushState(null, null, "/portfolio"); 
         $(".window__wrapper").addClass("gone")
         let sectionAnimate = setTimeout(() => {
             $(".window__wrapper").removeClass("gone")
