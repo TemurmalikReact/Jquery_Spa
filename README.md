@@ -1,2 +1,0 @@
-# porftolioJquery
-Single Portfolio Template
