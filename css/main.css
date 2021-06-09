@@ -13,7 +13,6 @@
 #preload-03 { background: url(../img/constructive_bg_03.jpg) no-repeat -9999px -9999px; }
 #preload-04 { background: url(../img/constructive_bg_04.jpg) no-repeat -9999px -9999px; }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -12135,7 +12134,7 @@ img {
   .section .container {
     max-width: 800px;
     padding: 40px 25px;
-  }
+  } 
   .section__title {
     padding: 0 0 20px;
     margin-bottom: 35px;
@@ -12148,7 +12147,7 @@ img {
   .section__title .title {
     margin-bottom: 13px;
     font-size: 15px;
-  }
+  } 
   .section__title .subtitle {
     font-size: 9px;
     margin-bottom: 0;
@@ -13913,7 +13912,7 @@ img {
   -o-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   transition: all 0.3s linear;
-  background-color: #1c3294;
+  background-color: rgb(25, 40, 120);
   min-height: 100vh !important;
   height: 100%;
 }
@@ -13942,22 +13941,22 @@ img {
   cursor: pointer;
   position: absolute;
   top: 10px;
-  right: -85px;
+  right: -60px;
 }
 
 .sidebar__toggle {
   display: block;
-  margin: 5px;
-  height: 11px;
-  width: 60px;
+  margin: 4px;
+  height: 8px;
+  width: 45px;
   -webkit-border-radius: 15px;
      -moz-border-radius: 15px;
-          border-radius: 15px;
-  background: #1c3294;
+          border-radius: 5px;
+  background: rgb(28, 50, 120);
   -webkit-box-shadow: 0 0 5px #8c8cec;
      -moz-box-shadow: 0 0 5px #8c8cec;
           box-shadow: 0 0 5px #8c8cec;
-  border: 3px solid #9191eb;
+  border: 2px solid rgb(95, 100, 175);
 }
 
 .sidebar__toggle.before {
@@ -13965,7 +13964,7 @@ img {
 }
 
 .sidebar__toggle.after {
-  width: 35px;
+  width: 45px;
 }
 
 .sidebar__logo {
@@ -14277,7 +14276,7 @@ img {
   }
 }
 
-@media screen and (max-height: 481px) and (max-width: 855px) {
+@media screen and (max-height: 577px) and (max-width: 1001px) {
   .img {
     display: none;
   }
@@ -14296,7 +14295,7 @@ img {
   transition: all 0.3s linear;
 }
 
-@media screen and (max-width: 855px) {
+@media screen and (max-width: 1001px) {
   .footer {
     padding: 15px 5px;
   }
@@ -14392,11 +14391,11 @@ img {
 
 @media screen and (max-width: 375px) {
   .sidebar {
-    width: 275px;
+    width: 285px;
     left: -285px;
   }
   .sidebar__nav-item {
-    height: 44px;
+    height: 42px;
   }
   .sidebar__nav-link {
     height: 100%;
@@ -14421,7 +14420,7 @@ img {
 
 .sidebar__toggle-div.close {
   top: 8px;
-  right: -50px;
+  right: -48px;
 }
 
 .sidebar__toggle.close {
@@ -14437,15 +14436,12 @@ img {
 }
 
 .sidebar__toggle.before.close {
-  -webkit-animation: beforeClose 0.2s linear forwards;
-     -moz-animation: beforeClose 0.2s linear forwards;
-       -o-animation: beforeClose 0.2s linear forwards;
-          animation: beforeClose 0.2s linear forwards;
-  position: relative;
-  top: 10px;
+  opacity: 0;
 }
 
 .sidebar__toggle.mid.close {
+  width: 35px;
+  height: 4px;
   -webkit-animation: midClose 0.2s linear forwards;
      -moz-animation: midClose 0.2s linear forwards;
        -o-animation: midClose 0.2s linear forwards;
@@ -14458,10 +14454,10 @@ img {
        -o-animation: afterClose 0.2s linear forwards;
           animation: afterClose 0.2s linear forwards;
   position: relative;
-  bottom: 10px;
-  width: 45px;
-  height: 5px;
-}
+  bottom: 8.5px;
+  width: 35px;
+  height: 4px;
+} 
 
 @-webkit-keyframes beforeClose {
   from {
@@ -14887,8 +14883,8 @@ img {
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
-  -webkit-filter: brightness(30%) contrast(115%) saturate(110%);
-          filter: brightness(30%) contrast(115%) saturate(110%);
+  -webkit-filter: brightness(30%) contrast(120%) saturate(95%);
+          filter: brightness(30%) contrast(120%) saturate(95%);
 }
 
 @media screen and (max-width: 1201px) {
@@ -14897,7 +14893,7 @@ img {
   }
 }
 
-@media screen and (max-width: 855px) {
+@media screen and (max-width: 1001px) {
   .background-img {
     width: 100%;
     left: 0;
