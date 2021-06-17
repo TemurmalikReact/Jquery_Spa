@@ -7285,7 +7285,7 @@ img {
     height: 100%;
     width: 100%;
     position: relative;
-  }
+  } 
   .portfolio__img .content {
     position: absolute;
     left: 0;
@@ -8934,7 +8934,7 @@ img {
   .section .container {
     max-width: 800px;
     padding: 40px 25px;
-  }
+  } 
   .section__title {
     padding: 0 0 20px;
     margin-bottom: 25px;
@@ -9009,7 +9009,7 @@ img {
     font-weight: 600;
     margin-bottom: 15px;
     text-transform: uppercase;
-  }
+  } 
   .portfolio__img .content span {
     font-size: 11px;
     color: #707070;
@@ -14276,7 +14276,7 @@ img {
   }
 }
 
-@media screen and (max-height: 577px) and (max-width: 1001px) {
+@media screen and (max-height: 481px) {
   .img {
     display: none;
   }
