@@ -3,96 +3,737 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
-    <pre style="font-size: 6px;">
-        <code>
-import java.util.*;
+    <div class="page">
+        <div class="sidebar">
+            <div href="#" class="sidebar__toggle-div toggle-show">
+                <span class="sidebar__toggle before"></span>
+                <span class="sidebar__toggle mid"></span>
+                <span class="sidebar__toggle after"></span>
+            </div>
+            <div class="sidebar__wrapper">
+                <div class="sidebar__logo-div">
+                    <a href="#" class="sidebar__logo">
+                        <div class="img">
+                            <img src="./img/user.jpg">
+                        </div>
+                        <span class="header-menu">Temurmalik</span>
+                    </a>
+                </div>
+                <div class="sidebar__nav">
+                    <div class="sidebar__nav-item">
+                        <a href="#home" class="sidebar__nav-link link-home active-page">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 32 32">
+                                <g id="icomoon-ignore"></g>
+                                <path
+                                    d="M16 2.672l-5.331 5.331v-2.133h-4.265v6.398l-3.755 3.755 0.754 0.754 12.597-12.597 12.597 12.597 0.754-0.754-13.351-13.351zM7.47 6.937h2.132v2.132l-2.133 2.133v-4.265z">
+                                </path>
+                                <path
+                                    d="M6.404 16.533v12.795h7.464v-7.464h4.265v7.464h7.464v-12.795l-9.596-9.596-9.596 9.596zM24.53 28.262h-5.331v-7.464h-6.398v7.464h-5.331v-11.287l8.53-8.53 8.53 8.53v11.287z">
+                                </path>
+                            </svg>
+                            <span>Home</span>
+                        </a>
+                    </div>
+                    <div class="sidebar__nav-item">
+                        <a href="#about" class="sidebar__nav-link">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 32 32">
+                                <g id="icomoon-ignore"></g>
+                                <path
+                                    d="M16 3.205c-7.067 0-12.795 5.728-12.795 12.795s5.728 12.795 12.795 12.795 12.795-5.728 12.795-12.795c0-7.067-5.728-12.795-12.795-12.795zM16 4.271c6.467 0 11.729 5.261 11.729 11.729 0 2.845-1.019 5.457-2.711 7.49-1.169-0.488-3.93-1.446-5.638-1.951-0.146-0.046-0.169-0.053-0.169-0.66 0-0.501 0.206-1.005 0.407-1.432 0.218-0.464 0.476-1.244 0.569-1.944 0.259-0.301 0.612-0.895 0.839-2.026 0.199-0.997 0.106-1.36-0.026-1.7-0.014-0.036-0.028-0.071-0.039-0.107-0.050-0.234 0.019-1.448 0.189-2.391 0.118-0.647-0.030-2.022-0.921-3.159-0.562-0.719-1.638-1.601-3.603-1.724l-1.078 0.001c-1.932 0.122-3.008 1.004-3.57 1.723-0.89 1.137-1.038 2.513-0.92 3.159 0.172 0.943 0.239 2.157 0.191 2.387-0.010 0.040-0.025 0.075-0.040 0.111-0.131 0.341-0.225 0.703-0.025 1.7 0.226 1.131 0.579 1.725 0.839 2.026 0.092 0.7 0.35 1.48 0.569 1.944 0.159 0.339 0.234 0.801 0.234 1.454 0 0.607-0.023 0.614-0.159 0.657-1.767 0.522-4.579 1.538-5.628 1.997-1.725-2.042-2.768-4.679-2.768-7.555 0-6.467 5.261-11.729 11.729-11.729zM7.811 24.386c1.201-0.49 3.594-1.344 5.167-1.808 0.914-0.288 0.914-1.058 0.914-1.677 0-0.513-0.035-1.269-0.335-1.908-0.206-0.438-0.442-1.189-0.494-1.776-0.011-0.137-0.076-0.265-0.18-0.355-0.151-0.132-0.458-0.616-0.654-1.593-0.155-0.773-0.089-0.942-0.026-1.106 0.027-0.070 0.053-0.139 0.074-0.216 0.128-0.468-0.015-2.005-0.17-2.858-0.068-0.371 0.018-1.424 0.711-2.311 0.622-0.795 1.563-1.238 2.764-1.315l1.011-0.001c1.233 0.078 2.174 0.521 2.797 1.316 0.694 0.887 0.778 1.94 0.71 2.312-0.154 0.852-0.298 2.39-0.17 2.857 0.022 0.078 0.047 0.147 0.074 0.217 0.064 0.163 0.129 0.333-0.025 1.106-0.196 0.977-0.504 1.461-0.655 1.593-0.103 0.091-0.168 0.218-0.18 0.355-0.051 0.588-0.286 1.338-0.492 1.776-0.236 0.502-0.508 1.171-0.508 1.886 0 0.619 0 1.389 0.924 1.68 1.505 0.445 3.91 1.271 5.18 1.77-2.121 2.1-5.035 3.4-8.248 3.4-3.183 0-6.073-1.277-8.188-3.342z">
+                                </path>
+                            </svg>
+                            <span>About Me</span>
+                        </a>
+                    </div>
+                    <div class="sidebar__nav-item">
+                        <a href="#resume" class="sidebar__nav-link">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 27 32">
+                                <g id="icomoon-ignore"></g>
+                                <path d="M16.785 12.328h7.342v1.049h-7.342v-1.049z"></path>
+                                <path d="M16.784 18.623h7.343v1.049h-7.343v-1.049z"></path>
+                                <path d="M16.784 15.475h5.237v1.049h-5.237v-1.049z"></path>
+                                <path
+                                    d="M15.735 6.034v-3.147h-4.196v3.147h-11.539v23.079h27.275v-23.079h-11.539zM26.226 7.083v2.098h-10.49v-2.098h10.49zM12.588 3.936h2.098v5.245h-2.098v-5.245zM1.049 7.083h10.49v2.098h-10.49v-2.098zM1.049 28.064v-17.833h25.177v17.833h-25.177z">
+                                </path>
+                                <path
+                                    d="M15.463 23.402c-0.757-0.315-2.545-0.936-3.652-1.263-0.094-0.030-0.108-0.035-0.108-0.428 0-0.324 0.133-0.65 0.263-0.927 0.14-0.301 0.308-0.806 0.368-1.259 0.168-0.196 0.396-0.58 0.545-1.313 0.128-0.645 0.069-0.881-0.017-1.102-0.009-0.023-0.018-0.046-0.026-0.069-0.033-0.152 0.012-0.938 0.123-1.549 0.076-0.418-0.019-1.309-0.596-2.046-0.364-0.466-1.060-1.037-2.334-1.117l-0.699 0.001c-1.251 0.079-1.949 0.651-2.312 1.116-0.577 0.737-0.673 1.628-0.597 2.046 0.112 0.611 0.156 1.397 0.124 1.546-0.006 0.026-0.016 0.049-0.026 0.072-0.085 0.221-0.146 0.456-0.016 1.102 0.146 0.733 0.375 1.117 0.544 1.313 0.058 0.453 0.226 0.958 0.368 1.259 0.103 0.22 0.153 0.519 0.153 0.942 0 0.393-0.015 0.398-0.103 0.426-1.144 0.338-2.967 0.996-3.646 1.293-0.539 0.231-0.67 0.646-0.67 1.020 0 0.105 0 0.268 0 0.453h1.049v-0.453c0-0.017 0.001-0.030 0.002-0.040 0.009-0.005 0.021-0.011 0.039-0.018 0.645-0.283 2.433-0.927 3.543-1.255 0.835-0.265 0.835-1.049 0.835-1.426 0-0.581-0.080-1.022-0.252-1.389-0.105-0.224-0.235-0.621-0.277-0.946l-0.041-0.313-0.206-0.239c-0.032-0.036-0.192-0.244-0.309-0.833-0.080-0.397-0.051-0.471-0.035-0.514 0.028-0.068 0.051-0.135 0.073-0.23 0.092-0.424-0.030-1.483-0.116-1.955-0.029-0.155 0.012-0.73 0.39-1.214 0.332-0.425 0.844-0.665 1.522-0.713l0.629-0.001c0.691 0.049 1.209 0.289 1.541 0.714 0.379 0.484 0.419 1.059 0.391 1.213-0.086 0.472-0.208 1.53-0.117 1.957l0.009 0.041 0.011 0.040c0.014 0.046 0.030 0.090 0.052 0.149 0.017 0.044 0.046 0.117-0.033 0.513-0.119 0.59-0.28 0.8-0.312 0.836l-0.204 0.237-0.041 0.31c-0.043 0.326-0.172 0.725-0.277 0.949-0.17 0.36-0.364 0.841-0.364 1.375 0 0.377 0 1.162 0.861 1.434 1.048 0.309 2.805 0.916 3.535 1.221 0.111 0.047 0.151 0.105 0.162 0.127v0.424h1.049c0-0.184 0-0.348 0-0.453-0-0.374-0.259-0.831-0.797-1.063z">
+                                </path>
+                            </svg>
+                            <span>Resume</span>
+                        </a>
+                    </div>
+                    <div class="sidebar__nav-item">
+                        <a href="#services" class="sidebar__nav-link">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 30 32">
+                                <g id="icomoon-ignore"></g>
+                                <path
+                                    d="M25.6 18.453l4.267-0.427v-4l-4.267-0.427c-0.267-1.28-0.8-2.453-1.44-3.467l2.4-3.2-2.453-2.453-3.2 2.4c-1.013-0.64-2.187-1.173-3.413-1.44l-0.48-4.267h-4l-0.48 4.267c-1.227 0.267-2.347 0.747-3.36 1.387l-3.307-2.347-2.453 2.453 2.347 3.307c-0.64 1.013-1.12 2.133-1.387 3.36l-4.267 0.48v4l4.267 0.48c0.267 1.227 0.8 2.4 1.44 3.467l-2.4 3.2 2.453 2.453 3.2-2.4c1.013 0.64 2.187 1.173 3.413 1.44l0.533 4.267h4l0.533-4.267c1.227-0.267 2.347-0.747 3.36-1.387l3.253 2.347 2.453-2.453-2.4-3.36c0.64-1.067 1.12-2.187 1.387-3.413zM28.8 14.933v2.080l-3.2 0.32c0.053-0.427 0.107-0.907 0.107-1.387s-0.053-0.907-0.107-1.387l3.2 0.373zM23.947 5.76l1.173 1.173-1.76 2.4c-0.533-0.693-1.12-1.28-1.813-1.813l2.4-1.76zM13.867 2.133h2.133l0.373 3.2c-0.48-0.053-0.96-0.107-1.387-0.107-0.48 0-0.96 0.053-1.387 0.107l0.267-3.2zM4.693 6.987l1.227-1.227 2.453 1.707c-0.373 0.267-0.693 0.587-1.013 0.907s-0.64 0.64-0.907 1.013l-1.76-2.4zM1.067 17.067v-2.133l3.2-0.373c-0.053 0.48-0.107 0.96-0.107 1.44s0.053 0.96 0.107 1.387l-3.2-0.32zM5.92 26.187l-1.173-1.12 1.76-2.4c0.533 0.64 1.12 1.28 1.76 1.76l-2.347 1.76zM16 29.867h-2.133l-0.373-3.2c0.48 0.053 0.96 0.107 1.44 0.107v0 0c0.48 0 0.96-0.053 1.44-0.107l-0.373 3.2zM14.933 25.653c-5.333 0-9.653-4.32-9.653-9.653 0-2.56 1.013-5.013 2.827-6.827s4.267-2.827 6.827-2.827v0c5.333 0 9.653 4.32 9.653 9.653 0 2.56-1.013 5.013-2.827 6.827s-4.213 2.827-6.827 2.827zM25.173 25.013l-1.173 1.173-2.453-1.76c0.373-0.267 0.693-0.587 1.013-0.907s0.587-0.64 0.907-1.013l1.707 2.507z">
+                                </path>
+                            </svg>
+                            <span>Services</span>
+                        </a>
+                    </div>
+                    <div class="sidebar__nav-item">
+                        <a href="#portfolio" class="sidebar__nav-link">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 32 32">
+                                <g id="icomoon-ignore"></g>
+                                <path
+                                    d="M19.732 7.203v-2.666h-7.464v2.666h-9.063v20.259h25.59v-20.259h-9.063zM13.334 5.604h5.331v1.599h-5.331v-1.599zM12.268 8.27h15.461v8.53h-7.997v-2.133h-7.464v2.133h-7.997v-8.53h7.997zM18.666 15.733v3.199h-5.331v-3.199h5.331zM4.271 26.396v-8.53h7.997v2.133h7.464v-2.133h7.997v8.53h-23.457z">
+                                </path>
+                            </svg>
+                            <span>Portfolio</span>
+                        </a>
+                    </div>
+                    <div class="sidebar__nav-item">
+                        <a href="#blog" class="sidebar__nav-link">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 32 32">
+                                <g id="icomoon-ignore"></g>
+                                <path
+                                    d="M16 3.205h-8.53c-2.551 0-4.265 1.714-4.265 4.265v17.733c0 0.842 0.314 3.592 4.357 3.592h21.233v-25.59h-12.795zM14.934 4.271v10.2l-2.611-2.378-2.899 2.44v-10.261h5.511zM7.47 4.271h0.887v12.552l3.938-3.313 3.706 3.374v-12.613h11.729v17.593h-20.259c-1.357 0-2.457 0.405-3.199 1.113v-15.508c0-1.943 1.256-3.199 3.199-3.199zM7.562 27.729c-2.444 0-3.151-1.109-3.269-2.17 0.002-1.646 1.189-2.628 3.177-2.628h20.259v4.798h-20.167z">
+                                </path>
+                            </svg>
+                            <span>Blog</span>
+                        </a>
+                    </div>
+                    <div class="sidebar__nav-item">
+                        <a href="#contact" class="sidebar__nav-link">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 32 32">
+                                <g id="icomoon-ignore"></g>
+                                <path
+                                    d="M29.229 13.342l-11.596-11.595c-0.436-0.436-1.016-0.677-1.633-0.677s-1.197 0.24-1.633 0.677l-11.695 11.693v17.491h26.656v-17.489l-0.099-0.099zM4.38 13.24l10.741-10.74c0.47-0.47 1.289-0.47 1.759 0l11.246 11.247-7.664 7.664-2.829-2.829c-0.436-0.436-1.016-0.677-1.633-0.677s-1.197 0.241-1.633 0.677l-2.871 2.87-7.664-7.664 0.548-0.548zM10.742 22.205l-0.079 0.080-0.001-0.001-6.923 6.923v-14.005l7.004 7.003zM4.589 29.864l0.573-0.573h0.002l9.957-9.956c0.47-0.47 1.289-0.47 1.759 0l10.531 10.529h-22.822zM28.262 15.57v13.638l-7.046-7.043 7.046-7.046v0.451z">
+                                </path>
+                            </svg>
+                            <span>Contact</span>
+                        </a>
+                    </div>
+                </div>
+                <nav class="sidebar__social">
+                    <a href="#" class="sidebar__nav-ico-link">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#" class="sidebar__nav-ico-link">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="#" class="sidebar__nav-ico-link">
+                        <i class="fa fa-google"></i>
+                    </a>
+                    <a href="#" class="sidebar__nav-ico-link">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="sidebar__nav-ico-link">
+                        <i class="fa fa-dribbble"></i>
+                    </a>
+                </nav>
+            </div>
+        </div>
+        <section class="section home" id="home">
+            <img class="background-img" src="./img/Jacket.png">
+            <div class="container-fluid">
+                <h1 class="hello">Hello</h1>
+                <div id="typed-texts" hidden="hidden">
+                    <p class="typing">Temurmalik Abduqodirov</p>
+                    <p class="typing">Web Designer</p>
+                    <p class="typing">Freelancer</p>
+                </div>
+                <p class="home__subtitle typing">
+                    I am
+                    <span id="typed-box"></span>
+                </p>
+            </div>
+        </section>
+        <section class="section about" id="about">
+            <div class="container about__div">
+                <div class="section__title">
+                    <h1 class="title">About Me</h1>
+                    <p class="subtitle">Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-12 col-12 about__column sub-img">
+                        <img src="./img/user.jpg">
+                    </div> 
+                    <div class="col-lg-8 col-md-12 col-12 about__column">
+                        <div class="row col">
+                            <div class="col-lg-6 col-md-6 col-12 col-sm-6 about__column-sub">
+                                <span class="about__detail">
+                                    <b>Fullname :
+                                    </b> 
+                                    Jonathan Doe</span>
+                                <span class="about__detail">
+                                    <b>Adress :
+                                    </b>
+                                    Dhaka, Bangladesh</span>
+                                <span class="about__detail">
+                                    <b>Phone :
+                                    </b>
+                                    +4573-8365-9374
+                                </span>
+                                <span class="about__detail">
+                                    <b>Email :
+                                    </b>
+                                    johndoe@gmail.com
+                                </span>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12 col-sm-6 about__column-sub">
+                                <span class="about__detail">
+                                    <b>Birthday :
+                                    </b>
+                                    21 January 1985</span>
+                                <span class="about__detail">
+                                    <b>Job :
+                                    </b>
+                                    Freelancer</span>
+                                <span class="about__detail">
+                                    <b>Skype :
+                                    </b>
+                                    johndoe_647
+                                </span>
+                                <span class="about__detail">
+                                    <b>Website :
+                                    </b>
+                                    www.johndoe.com
+                                </span>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-12 about__column-sub about__text-div">
+                                <span class="about__text"> 
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates perferendis
+                                    repudiandae aliquid harum nostrum fugit omnis animi quas labore dignissimos
+                                    veniam impedit saepe tempora perspiciatis architecto quae modi quasi illo, ab
+                                    enim, facere nihil aliquam eos corrupti? Aliquam rerum temporibus eveniet odit.
+                                    Culpa eos minima error, unde architecto tempora a tenetur recusandae quo vero.
+                                    Quam?
+                                </span>
+                                <div class="about__buttons">
+                                    <button class="about__button" type="button">
+                                        <a href="">Hire Me</a>
+                                    </button>
+                                    <button class="about__button">
+                                        <a href="#">download resume</a>
+                                    </button> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-record Pair(int a, int b) {
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        Pair pair = (Pair) obj;
-        return a + b == pair.a + pair.b;
-    }
+            <div class="skills">
+                <div class="container skills-div">
+                    <div class="section__title skills__title">
+                        <h1 class="title">My skills</h1>
+                        <p class="subtitle">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-12 col-sm-6  skills__column">
+                            <span class="skills__progress-title">Web Design -
+                                <b>90%</b>
+                            </span>
+                            <div class="skills__progress">
+                                <div class="skills__progress-item progress-web">
+                                    <div class="limit-div">
+                                        <i class="limit"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="skills__progress-title">Wordpress -
+                                <b>85%</b>
+                            </span>
+                            <div class="skills__progress">
+                                <div class="skills__progress-item progress-word">
+                                    <div class="limit-div">
+                                        <i class="limit"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="skills__progress-title">App Development -
+                                <b>92%</b>
+                            </span>
+                            <div class="skills__progress">
+                                <div class="skills__progress-item progress-app">
+                                    <div class="limit-div">
+                                        <i class="limit"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12 col-sm-6 skills__column">
+                            <span class="skills__progress-title">PHP & MYSQL -
+                                <b>90%</b>
+                            </span>
+                            <div class="skills__progress">
+                                <div class="skills__progress-item progress-php">
+                                    <div class="limit-div">
+                                        <i class="limit"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="skills__progress-title">Joomla -
+                                <b>85%</b>
+                            </span>
+                            <div class="skills__progress">
+                                <div class="skills__progress-item progress-joomla">
+                                    <div class="limit-div">
+                                        <i class="limit"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="skills__progress-title">Html & Css -
+                                <b>92%</b>
+                            </span>
+                            <div class="skills__progress">
+                                <div class="skills__progress-item progress-html">
+                                    <div class="limit-div">
+                                        <i class="limit"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(a + b);
-    }
-}
+        <!-- resume -->
+        <section class="section resume" id="resume">
+            <div class="container resume__div">
+                <div class="section__title">
+                    <h1 class="title">Resume</h1>
+                    <p class="subtitle">Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-12 resume__column">
+                        <h1 class="resume__header">
+                            <span class="resume__ico-div">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"
+                                    viewbox="0 0 32 32">
+                                    <g id="icomoon-ignore"></g>
+                                    <path
+                                        d="M31.514 11.177l-15.514-7.467-15.514 7.467 2.186 1.318v11.529h1.066v-10.886l3.199 1.929v13.223h18.126v-13.219l6.451-3.894zM16 4.893l13.275 6.39-13.267 8.008-13.282-8.009 13.274-6.39zM23.997 27.224h-15.994v-11.514l8.005 4.827 7.989-4.823v11.51z"
+                                        fill="#000000"></path>
+                                </svg>
+                            </span>Education
+                        </h1>
+                        <div class="resume__content">
+                            <span class="content-year">2020-2021</span>
+                            <span class="content-header">Computer Science</span>
+                            <span class="content-text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Mollitia recusandae corrupti quasi beatae</span>
+                        </div>
+                        <div class="resume__content">
+                            <span class="content-year">2016-2019</span>
+                            <span class="content-header">Master Degree of Design</span>
+                            <span class="content-text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Mollitia recusandae corrupti quasi beatae</span>
+                        </div>
+                        <div class="resume__content to-bottom">
+                            <span class="content-year">2012-2015</span>
+                            <span class="content-header">Computer Science</span>
+                            <span class="content-text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Mollitia recusandae corrupti quasi beatae</span>
+                        </div>
+                    </div>
 
-class Container {
-    private Set<Pair> pairs;
+                    <div class="col-lg-6 col-md-6 col-12 resume__column">
+                        <h1 class="resume__header">
+                            <span class="resume__ico-div">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32"
+                                    viewbox="0 0 32 32">
+                                    <g id="icomoon-ignore"></g>
+                                    <path
+                                        d="M19.732 7.203v-2.666h-7.464v2.666h-9.063v20.259h25.59v-20.259h-9.063zM13.334 5.604h5.331v1.599h-5.331v-1.599zM12.268 8.27h15.461v8.53h-7.997v-2.133h-7.464v2.133h-7.997v-8.53h7.997zM18.666 15.733v3.199h-5.331v-3.199h5.331zM4.271 26.396v-8.53h7.997v2.133h7.464v-2.133h7.997v8.53h-23.457z"
+                                        fill="#000000"></path>
+                                </svg>
+                            </span>Work Experience
+                        </h1>
+                        <div class="resume__content">
+                            <span class="content-year">2020-2021</span>
+                            <span class="content-header">UI/UX Designer</span>
+                            <span class="content-text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Mollitia recusandae corrupti quasi beatae</span>
+                        </div>
+                        <div class="resume__content">
+                            <span class="content-year">2016-2019</span>
+                            <span class="content-header">Frontend Developer</span>
+                            <span class="content-text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Mollitia recusandae corrupti quasi beatae</span>
+                        </div>
+                        <div class="resume__content to-bottom">
+                            <span class="content-year">2012-2015</span>
+                            <span class="content-header">Web Developer</span>
+                            <span class="content-text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Mollitia recusandae corrupti quasi beatae</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    public Container(List<Pair> list) {
-        this.pairs = new HashSet<>(list);
-    }
+        <!-- services -->
+        <section class="section services" id="services">
+            <div class="container services__div">
+                <div class="section__title">
+                    <h1 class="title">Services</h1>
+                    <p class="subtitle">Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6 services__column">
+                        <div class="services__ico-div">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="32" viewbox="0 0 28 32">
+                                <g id="icomoon-ignore"></g>
+                                <path
+                                    d="M27.467 10.667l-6.293-7.467h-14.4l-6.293 7.467-0.48 0.533 0.427 0.533 13.547 17.067 13.973-17.6-0.48-0.533zM26.080 10.667h-10.72l5.333-6.347 5.387 6.347zM13.92 10.667l-5.547-6.4h10.987l-5.44 6.4zM7.147 4.427l5.387 6.24h-10.667l5.28-6.24zM13.44 11.733v14.667l-11.68-14.667h11.68zM14.507 26.4v-14.667h11.627l-11.627 14.667z"
+                                    fill="#000000"></path>
+                            </svg>
+                        </div>
+                        <div class="services__header-div">
+                            <span class="services__header">Trendy Design</span>
+                            <span class="services__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sit unde
+                                dolorum.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 services__column">
+                        <div class="services__ico-div">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewbox="0 0 32 32">
+                                <g id="icomoon-ignore"></g>
+                                <path
+                                    d="M28.795 4.804h-25.59v15.994h8.682l-5.483 6.398h19.192l-5.484-6.398h8.683v-15.994zM8.722 26.129l7.277-8.491 7.278 8.491h-14.556zM27.729 19.732h-8.531l-3.199-3.732-3.199 3.732h-8.529v-13.861h23.457v13.861z"
+                                    fill="#000000"></path>
+                            </svg>
+                        </div>
+                        <div class="services__header-div">
+                            <span class="services__header">Web Development</span>
+                            <span class="services__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sit unde
+                                dolorum.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 services__column">
+                        <div class="services__ico-div">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewbox="0 0 32 32">
+                                <g id="icomoon-ignore"></g>
+                                <path
+                                    d="M23.086 1.606h-14.173c-0.797 0-1.444 0.647-1.444 1.444v25.901c0 0.798 0.647 1.444 1.444 1.444h14.173c0.797 0 1.444-0.646 1.444-1.444v-25.901c0-0.797-0.647-1.444-1.444-1.444zM23.464 28.951c0 0.208-0.169 0.377-0.377 0.377h-14.173c-0.208 0-0.377-0.169-0.377-0.377v-4.95h14.928v4.95zM23.464 22.934h-14.928v-17.042h14.928v17.042zM23.464 4.826h-14.928v-1.776c0-0.208 0.169-0.378 0.377-0.378h14.173c0.208 0 0.377 0.17 0.377 0.378v1.776z"
+                                    fill="#000000"></path>
+                                <path d="M14.401 26.129h3.199v1.066h-3.199v-1.066z" fill="#000000"></path>
+                            </svg>
+                        </div>
+                        <div class="services__header-div">
+                            <span class="services__header">App Development</span>
+                            <span class="services__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sit unde
+                                dolorum.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 services__column">
+                        <div class="services__ico-div">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewbox="0 0 32 32">
+                                <g id="icomoon-ignore"></g>
+                                <path
+                                    d="M26.663 11.193c0-5.888-4.773-10.662-10.663-10.662s-10.662 4.774-10.662 10.662c0 3.468 1.661 6.542 4.225 8.487l-0.005 0.003c0.049 0.033 0.099 0.071 0.152 0.112 0.005 0.004 0.010 0.008 0.015 0.011 0.825 0.651 2.011 2.173 2.011 4.181v7.482h8.53v-7.482c0-2.133 1.232-3.663 2.133-4.271l-0.003-0.003c2.589-1.944 4.268-5.033 4.268-8.52zM12.801 30.403v-3.217h6.398v3.217h-6.398zM16 12.259c-0.588 0-1.066-0.478-1.066-1.066s0.479-1.067 1.066-1.067 1.066 0.479 1.066 1.067c0 0.588-0.479 1.066-1.066 1.066zM21.755 18.861c-0.014 0.011-0.028 0.022-0.042 0.033-1.18 0.839-2.514 2.646-2.514 5.093v2.133h-2.666v-12.87c0.918-0.238 1.599-1.065 1.599-2.056 0-1.178-0.955-2.133-2.133-2.133s-2.133 0.955-2.133 2.133c0 0.992 0.681 1.819 1.599 2.056v12.87h-2.666v-2.133c0-2.296-1.302-4.138-2.407-5.010-0.008-0.007-0.019-0.015-0.029-0.023-0.035-0.027-0.069-0.053-0.102-0.078-0.018-0.016-0.036-0.031-0.056-0.045-2.417-1.834-3.804-4.618-3.804-7.638 0-5.291 4.305-9.596 9.596-9.596s9.596 4.305 9.596 9.596c-0 3.040-1.4 5.834-3.842 7.667z"
+                                    fill="#000000"></path>
+                            </svg>
+                        </div>
+                        <div class="services__header-div">
+                            <span class="services__header">User Interface Design</span>
+                            <span class="services__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sit unde
+                                dolorum.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 services__column">
+                        <div class="services__ico-div">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="29" height="32" viewbox="0 0 29 32">
+                                <g id="icomoon-ignore"></g>
+                                <path
+                                    d="M26.667 9.867l-0.96 0.96c-2.080-1.813-4.747-2.827-7.52-2.827-1.867 0-3.733 0.48-5.333 1.333l4.053-4.053c0.32 0.213 0.693 0.32 1.067 0.32 0.533 0 1.067-0.213 1.493-0.64 0.853-0.853 0.853-2.187 0-3.040-0.427-0.427-0.96-0.64-1.493-0.64s-1.067 0.213-1.493 0.64c-0.693 0.747-0.8 1.813-0.32 2.613l-5.12 5.12-0.96-0.96-2.613 2.613 0.96 0.96-5.227 5.227c-0.32-0.213-0.693-0.32-1.067-0.32-0.533 0-1.067 0.213-1.493 0.64-0.853 0.853-0.853 2.187 0 3.040 0.427 0.373 0.96 0.587 1.493 0.587s1.067-0.213 1.493-0.64c0.693-0.693 0.8-1.76 0.32-2.613l4.053-4.053c-2.133 4.107-1.653 9.227 1.493 12.853l-0.96 1.013 2.667 2.613 2.613-2.613-2.613-2.613-0.907 0.907c-3.093-3.627-3.253-8.853-0.64-12.693l0.427 0.427 2.667-2.613-0.48-0.427c1.707-1.227 3.787-1.867 5.92-1.867 2.507 0 4.853 0.907 6.773 2.507l-0.96 0.907 2.667 2.613 2.613-2.613-2.613-2.667zM12.32 28l-1.12 1.12-1.12-1.12 1.12-1.12 1.12 1.12zM17.227 2.72c0.213-0.213 0.48-0.32 0.747-0.32s0.533 0.107 0.747 0.32c0.427 0.427 0.427 1.067 0 1.493-0.213 0.213-0.48 0.32-0.747 0.32s-0.533-0.107-0.747-0.32c-0.427-0.373-0.427-1.067 0-1.493zM2.88 20.053c-0.213 0.213-0.48 0.32-0.747 0.32s-0.533-0.107-0.747-0.32c-0.213-0.16-0.32-0.427-0.32-0.747 0-0.267 0.107-0.533 0.32-0.747s0.48-0.32 0.747-0.32c0.267 0 0.533 0.107 0.747 0.32 0.427 0.427 0.427 1.12 0 1.493zM10.027 12.533l-1.12-1.12 1.12-1.12 1.12 1.12-1.12 1.12zM26.667 13.653l-1.12-1.12 1.12-1.12 1.12 1.12-1.12 1.12z"
+                                    fill="#000000"></path>
+                            </svg>
+                        </div>
+                        <div class="services__header-div">
+                            <span class="services__header">User Experience</span>
+                            <span class="services__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sit unde
+                                dolorum.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6 services__column">
+                        <div class="services__ico-div">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewbox="0 0 32 32">
+                                <g id="icomoon-ignore"></g>
+                                <path
+                                    d="M29.861 22.698v-19.192h-27.723v19.192h13.328v2.062l-5.056 2.8 0.516 0.933 5.073-2.81 5.073 2.81 0.516-0.933-5.056-2.8v-2.062h13.328zM3.205 4.572h25.59v17.060h-25.59v-17.060z"
+                                    fill="#000000"></path>
+                                <path
+                                    d="M15.294 15.427l-3.162-4.41-2.116 4.103-3.327-6.713-2.429 8.965 1.029 0.279 1.694-6.25 3.014 6.082 2.284-4.428 3.414 4.761 2.948-9.892-1.021-0.305z"
+                                    fill="#000000"></path>
+                                <path
+                                    d="M23.464 9.903c-1.764 0-3.199 1.435-3.199 3.199s1.435 3.199 3.199 3.199c1.763 0 3.198-1.435 3.198-3.199s-1.435-3.199-3.198-3.199zM23.464 15.235c-1.176 0-2.133-0.956-2.133-2.133s0.957-2.133 2.133-2.133c1.176 0 2.132 0.956 2.132 2.133s-0.956 2.133-2.132 2.133z"
+                                    fill="#000000"></path>
+                            </svg>
+                        </div>
+                        <div class="services__header-div">
+                            <span class="services__header">Responsive Design</span>
+                            <span class="services__text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sit unde
+                                dolorum.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid count-div">
+                <div class="container row">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12 count__column">
+                        <div class="counter-content">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="32" viewbox="0 0 28 32">
+                                <g id="icomoon-ignore"></g>
+                                <path
+                                    d="M27.467 10.667l-6.293-7.467h-14.4l-6.293 7.467-0.48 0.533 0.427 0.533 13.547 17.067 13.973-17.6-0.48-0.533zM26.080 10.667h-10.72l5.333-6.347 5.387 6.347zM13.92 10.667l-5.547-6.4h10.987l-5.44 6.4zM7.147 4.427l5.387 6.24h-10.667l5.28-6.24zM13.44 11.733v14.667l-11.68-14.667h11.68zM14.507 26.4v-14.667h11.627l-11.627 14.667z"
+                                    fill="#000000"></path>
+                            </svg>
+                            <span class="counter" data-count="235">0</span>
+                            <h5 class="count__text">Projects Completed</h5>
+                        </div>
+                    </div> 
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12 count__column">
+                        <div class="counter-content">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="32" viewbox="0 0 26 32">
+                                <g id="icomoon-ignore"></g>
+                                <path
+                                    d="M12.8 3.2c-7.093 0-12.8 5.707-12.8 12.8s5.707 12.8 12.8 12.8c7.093 0 12.8-5.707 12.8-12.8s-5.707-12.8-12.8-12.8zM12.8 27.733c-6.453 0-11.733-5.28-11.733-11.733s5.28-11.733 11.733-11.733c6.453 0 11.733 5.28 11.733 11.733s-5.28 11.733-11.733 11.733z"
+                                    fill="#000000"></path>
+                                <path
+                                    d="M19.467 19.040c-0.267-0.107-0.587-0.053-0.693 0.213-1.173 2.293-3.467 3.68-5.973 3.68-2.56 0-4.8-1.387-5.973-3.68-0.107-0.267-0.427-0.373-0.693-0.213-0.267 0.107-0.373 0.427-0.267 0.693 1.333 2.613 3.947 4.267 6.933 4.267 2.933 0 5.6-1.653 6.88-4.267 0.16-0.267 0.053-0.587-0.213-0.693z"
+                                    fill="#000000"></path>
+                                <path
+                                    d="M10.133 13.333c0 0.884-0.716 1.6-1.6 1.6s-1.6-0.716-1.6-1.6c0-0.884 0.716-1.6 1.6-1.6s1.6 0.716 1.6 1.6z"
+                                    fill="#000000"></path>
+                                <path
+                                    d="M18.667 13.333c0 0.884-0.716 1.6-1.6 1.6s-1.6-0.716-1.6-1.6c0-0.884 0.716-1.6 1.6-1.6s1.6 0.716 1.6 1.6z"
+                                    fill="#000000"></path>
+                            </svg>
+                            <span class="counter" data-count="365">0</span>
+                            <h5 class="count__text">Happy Clients</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12 count__column">
+                        <div class="counter-content">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewbox="0 0 32 32">
+                                <g id="icomoon-ignore"></g>
+                                <path
+                                    d="M28.262 2.675c-0.039 0-0.075 0.009-0.113 0.011h-3.085v-0.011l-21.212 0.011c-0.039-0.002-0.075-0.011-0.114-0.011-1.178 0-2.132 0.955-2.132 2.133 0 0.592 0.242 1.128 0.632 1.514l4.699 4.699v-0.348c0 4.825 3.774 8.759 8.53 9.036v8.551h-4.265v1.066h9.596v-1.066h-4.265v-8.551c4.756-0.277 8.53-4.211 8.53-9.036v0.348l4.699-4.699c0.39-0.386 0.632-0.921 0.632-1.514 0-1.178-0.955-2.132-2.133-2.132zM6.937 9.512l-3.949-3.949c-0.204-0.202-0.316-0.471-0.316-0.756 0-0.573 0.454-1.042 1.023-1.065 0.033 0.004 0.066 0.007 0.099 0.009l0.029 0.002h3.114v5.76zM23.997 10.672c0 4.41-3.588 7.997-7.997 7.997s-7.997-3.587-7.997-7.997v-6.931h15.994v6.931zM29.012 5.563l-3.949 3.949v-5.76l3.143-0.002c0.034-0.002 0.067-0.005 0.099-0.009 0.568 0.023 1.023 0.492 1.023 1.065-0 0.286-0.113 0.554-0.316 0.756z"
+                                    fill="#000000"></path>
+                            </svg>
+                            <span class="counter" data-count="38">0</span>
+                            <h5 class="count__text">Awards Won</h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-12 count__column">
+                        <div class="counter-content unborder">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="29" height="32" viewbox="0 0 29 32">
+                                <g id="icomoon-ignore"></g>
+                                <path
+                                    d="M15.84 1.653v0l-5.6 5.6c-3.413 3.413-3.52 8.853-0.373 12.427l-4.533 4.533-4.533-4.533-0.8 0.853 9.813 9.813 0.747-0.747-4.533-4.533 4.533-4.533c3.573 3.147 9.013 3.040 12.427-0.373l2.987-2.987h0.107v-0.107l2.56-2.56-12.8-12.853zM22.24 19.413c-3.093 3.093-8.213 3.093-11.307 0-0.693-0.693-1.173-1.44-1.6-2.24h15.147l-2.24 2.24zM25.547 16.053h-16.587c-0.853-2.72-0.16-5.813 1.973-8l4.907-4.853 11.307 11.307-1.6 1.547z"
+                                    fill="#000000"></path>
+                            </svg>
+                            <span class="counter" data-count="365">0</span>
+                            <h5 class="count__text">Cups of Coffee</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container services__div process__div">
+                <div class="section__title">
+                    <h1 class="title">My working process</h1>
+                    <p class="subtitle">Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="process row">
+                    <div class="process__column left-column">
+                        <div class="process__default">
+                            <span class="process__step righten">01</span>
+                            <span class="process__header righten">Discuss Idea</span>
+                            <span class="process__text righten">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Voluptates corrupti quis ame cumque!</span>
+                        </div>
+                        <div class="process__default">
+                            <span class="process__step righten">02</span>
+                            <span class="process__header righten">cREATIVE cONCEPT</span>
+                            <span class="process__text righten">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Voluptates corrupti quis ame cumque!</span>
+                        </div>
+                    </div>
+                    <div class="process__column center-column">
+                        <div class="process__circle">
+                            <div class="process__circle-text">
+                                <span>Working<br>Process</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="process__column right-column">
+                        <div class="process__default">
+                            <span class="process__step">03</span>
+                            <span class="process__header">pRODUCTION</span>
+                            <span class="process__text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Voluptates corrupti quis ame cumque!</span>
+                        </div>
+                        <div class="process__default">
+                            <span class="process__step">04</span>
+                            <span class="process__header">uNLIMITED sUPPORT</span>
+                            <span class="process__text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Voluptates corrupti quis ame cumque!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    public List<Integer> process() {
-        List<Integer> result = new ArrayList<>();
-        for (Pair pair : pairs) {
-            int product = pair.a() * pair.b();
-            if (-150 <= product && product < 150) {
-                result.add(product);
-            }
-        }
-        result.sort(Comparator.reverseOrder());
-        return result;
-    }
+        <!-- Portfolio -->
+        <section class="section portfolio" id="portfolio">
+            <div class="container">
+                <div class="section__title portfolio__title">
+                    <h1 class="title">Portfolio</h1>
+                    <p class="subtitle">Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="form-control portfolio__filter-select-div">
+                    <button class="portfolio__filter-select form-control">All Work</button>
+                    <i class="fa fa-chevron-down rotate-select"></i>
+                    <div class="portfolio__filter-buttons">
+                        <span class="portfolio__filter-btn active-filter" data-filter="*">All Work</span>
+                        <span class="portfolio__filter-btn" data-filter=".web">Web design</span>
+                        <span class="portfolio__filter-btn" data-filter=".uxui">UX/UI design</span>
+                        <span class="portfolio__filter-btn" data-filter=".wordpress">Wordpress</span>
+                        <span class="portfolio__filter-btn" data-filter=".brending">Brending</span>
+                    </div>
+                </div>
+                <div class="row portfolio__filter-wrapper">
+                </div>
+            </div>
+        </section>
 
-    public void removeOnCondition() {
-        pairs.removeIf(pair -> pair.a() + pair.b() < 0);
-    }
-}
-<br> // Without Stream
-        </code>
-        <code>
-        import java.util.*;
-        import java.util.stream.Collectors;
-        
-        record Pair(int a, int b) {
-            @Override
-            public boolean equals(Object obj) {
-                if (this == obj) return true;
-                if (obj == null || getClass() != obj.getClass()) return false;
-                Pair pair = (Pair) obj;
-                return a + b == pair.a + pair.b;
-            }
-        
-            @Override
-            public int hashCode() {
-                return Objects.hash(a + b);
-            }
-        }
-        
-        class Container {
-            private Set<Pair> pairs;
-        
-            public Container(List<Pair> list) {
-                this.pairs = new HashSet<>(list);
-            }
-        
-            public List<Integer> process() {
-                return pairs.stream()
-                            .map(pair -> pair.a() * pair.b())
-                            .filter(product -> -150 <= product && product < 150)
-                            .sorted(Comparator.reverseOrder())
-                            .collect(Collectors.toList());
-            }
-        
-            public void removeOnCondition() {
-                pairs.removeIf(pair -> pair.a() + pair.b() < 0);
-            }
-        }        
-<br> // With Stream
-        </code>
-        </pre>
+        <!-- blog -->
+        <section class="section blog" id="blog">
+            <div class="container">
+                <div class="section__title">
+                    <h1 class="title">Blog</h1>
+                    <p class="subtitle">Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="row" id="blogCards"></div>
+            </div>
+        </section>
+        <section class="section contact" id="contact">
+            <div class="container">
+                <div class="section__title contact-title">
+                    <h1 class="title">Let's Talk</h1>
+                    <p class="subtitle">Lorem ipsum dolor sit amet.</p>
+                </div>
+                <span class="contact-advice">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati mollitia et
+                    ut!
+                </span>
+                <div class="row contact__div">
+                    <div class="col-lg-6 col-md-6 col-12 contact__column">
+                        <form class="row contact-form" id="contact-form">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-12 contact__input-div">
+                                <input id="contact-name" class="form-control" type="text" placeholder="Name">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-12 contact__input-div">
+                                <input id="contact-email" class="form-control" type="email" placeholder="Email">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-12 contact__input-div">
+                                <input id="contact-phone" class="form-control" type="text" placeholder="Phone">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-12 contact__input-div">
+                                <input id="contact-web" class="form-control" type="text" placeholder="Website">
+                            </div>
+                            <div id="contact-desciption" class="col-lg-12 col-md-12 col-12 contact__input-div">
+                                <textarea class="form-control" type="text" placeholder="Description"></textarea>
+                            </div>
+                            <button class="contact__button" type="submit">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12 contact__column">
+                        <div class="contact__description">
+                            <span class="contact__description-header">Adress</span>
+                            <span class="contact__description-text">
+                                133 South Kutubhali, Donia, Jatrabari
+                                <br>
+                                Dhaka-1236
+                            </span>
+                        </div>
+                        <div class="contact__description">
+                            <span class="contact__description-header">Contact Info</span>
+                            <span class="contact__description-text">
+                                JonathanDoe@gmail.com
+                                <br>
+                                01 (800) 433 633
+                            </span>
+                        </div>
+                        <div class="contact__description">
+                            <span class="contact__description-header">Working Hours</span>
+                            <span class="contact__description-text">
+                                Daily 10:00 to 22:00 (Sunday Available)
+                                <br>
+                                01 (800) 433 633
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="wrapper__glass open"></div>
+        <div class="window__wrapper"></div>
+    </div>
+    <footer class="footer">
+        <p class="footer__copyright">
+            © 2017 copyright Rida all rights reserved. Designed and developed by Aazztech
+        </p>
+    </footer>
+
+    <div id="loader-wrapper">
+		<div id="loader"></div>
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+	</div>
+	
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/isotope.pkgd.min.js"></script>
+    <script src="./js/typed.min.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
